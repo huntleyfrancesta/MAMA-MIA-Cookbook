@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Form from "./components/Form";
-import Recipes from "./components/Recipes";
+import Recipes from "./components/Recipe";
 
 const API_KEY = "Your-api-key";
 
