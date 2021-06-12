@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link } from "react-router-dom";
 
-const API_KEY = "Your-api-key";
+const API_KEY = "eb31b06306msh69c31e41183fa42p14f486jsnece6bca4eb88";
 
 class Recipe extends React.Component {
   state = {
@@ -10,8 +10,8 @@ class Recipe extends React.Component {
   }
   componentDidMount = async () => {
     const title = this.props.location.state.recipe;
-    const req = await fetch(`https://cors-anywhere.herokuapp.com/http://food2fork.com/api/search?key=${API_KEY}&q=${title}`);
-
+    const req = await fetch(`https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/products/classify=${API_KEY}&q=${title}`);
+    
     const res = await req.json();
     this.setState({ activeRecipe: res.recipes[0] });
     console.log(this.state.activeRecipe);
