@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react'
 import "./App.css";
-import RecipeContainer from "../components/RecipeContainer"
+import recipe from "../components/Recipe"
 
 
 const BASE_URL = 'https://mama-mia-backend.herokuapp.com/';
