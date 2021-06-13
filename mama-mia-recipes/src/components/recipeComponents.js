@@ -1,12 +1,12 @@
 import React, { useState, useEffect} from 'react'
 import "./App.css";
-import Recipe from '..components/Recipe';
+import RecipeContainer from "../components/RecipeContainer"
 
 
 const BASE_URL = 'https://mama-mia-backend.herokuapp.com/';
 
 function RecipeContainer() {
-const [setRecipe, RecipeData] = useState([]);
+const [Recipe, setRecipe] = useState([]);
 
 useEffect(() => {
     fetch(BASE_URL)
