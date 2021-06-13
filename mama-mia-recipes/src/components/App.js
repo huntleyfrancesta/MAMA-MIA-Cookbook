@@ -23,8 +23,6 @@ const App = () => {
     setRecipe(data.hits);
     console.log(data.hits);
   };
-  //If you want to run only first time, leave it empty []
-  //If you want to run whenever the argument changes, put arg inside [arg]
 
   const updateSearch = e => {
     setInput(e.target.value);
@@ -34,9 +32,9 @@ const App = () => {
     e.preventDefault();
     setQuery(input);
     setInput("");
-    //Set search back to empty string
+   
   };
-  //combo for input value, onChange with function
+  
   return (
     <div className="App">
       <h1>Find recipe here and start cooking!</h1>
@@ -64,5 +62,4 @@ const App = () => {
     </div>
   );
 };
-
 export default App;

@@ -1,43 +1,16 @@
-import React from 'react';
-
-import { Link } from "react-router-dom";
-
-const API_KEY = "eb31b06306msh69c31e41183fa42p14f486jsnece6bca4eb88";
-
-class Recipe extends React.Component {
-  state = {
-    activeRecipe: []
-  }
-  componentDidMount = async () => {
-    const title = this.props.location.state.recipe;
-    const req = await fetch(`https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/products/classify=${API_KEY}&q=${title}`);
-    
-    const res = await req.json();
-    this.setState({ activeRecipe: res.recipes[0] });
-    console.log(this.state.activeRecipe);
-  }
-  render() {
-    const recipe = this.state.activeRecipe;
-    return (
-      <div className="container">
-        { this.state.activeRecipe.length !== 0 &&
-          <div className="active-recipe">
-            <img className="active-recipe__img" src={recipe.image_url} alt={recipe.title}/>
-            <h3 className="active-recipe__title">{ recipe.title }</h3>
-            <h4 className="active-recipe__publisher">
-              Publisher: <span>{ recipe.publisher }</span>
-            </h4>
-            <p className="active-recipe__website">Website: 
-              <span><a href={recipe.publisher_url}>{recipe.publisher_url}</a></span>
-            </p>
-            <button className="active-recipe__button">
-              <Link to="/">Go Home</Link>
-            </button>
-          </div>
-        }
-      </div>
-    );
-  }
+import React from "react";
+import css from "../style/recipe.module.css";
+const Recipe = ({ title, image, ingredient }) => {
+  return (
+    <div className={css.recipe}>
+      <h1>{title}</h1>
+      <img className={css.image} src={image} />
+      <ol>
+        {ingredient.map(ingre => (
+          <li>{ingre.text}</li>
+        ))}
+      </ol>
+    </div>
+  );
 };
-
 export default Recipe;
