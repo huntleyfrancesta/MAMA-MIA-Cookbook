@@ -4,7 +4,7 @@ const Recipe = ({ title, image, ingredient }) => {
   return (
     <div className={css.recipe}>
       <h1>{title}</h1>
-      <img className={css.image} src={image} />
+      <img className={css.image} src={image} alt={"searched recipe"} />
       <ol>
         {ingredient.map(ingre => (
           <li>{ingre.text}</li>
