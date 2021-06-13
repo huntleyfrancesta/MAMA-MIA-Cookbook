@@ -1,6 +1,6 @@
 .App {
   min-height: 100vh;
-  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  background-image: linear-gradient(to top, #a8edea 0%, orange 100%);
 }
 .search-form {
   min-height: 10vh;
