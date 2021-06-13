@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Recipe from "./components/Recipe";
 import "./App.css";
-import { async } from "q";
+//import { async } from "q";
 
 const App = () => {
   const APP_ID = "df40c8fb";
@@ -38,7 +38,7 @@ const App = () => {
   
   return (
     <div className="App">
-      <h1>Find recipe here and start cooking!</h1>
+      <h1>MAMA MIA RECIPES!</h1>
       <form onSubmit={getInput} className="search-form">
         <input
           className="search-bar"
