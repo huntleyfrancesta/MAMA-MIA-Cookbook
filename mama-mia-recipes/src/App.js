@@ -12,7 +12,7 @@ const App = () => {
   const [query, setQuery] = useState("chicken");
 
   useEffect(() => {
-    getRecipe();
+  getRecipe();
   }, [query]);
 
   const getRecipe = async () => {
