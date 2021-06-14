@@ -3,7 +3,7 @@ import "./App.css";
 import recipe from "../components/Recipe"
 
 
-const BASE_URL = 'https://mama-mia-backend.herokuapp.com/';
+const BASE_URL = 'https://rocky-shore-75444.herokuapp.com/';
 
 function RecipeContainer() {
 const [Recipe, setRecipe] = useState([]);
