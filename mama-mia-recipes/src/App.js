@@ -14,6 +14,8 @@ const App = () => {
   useEffect(() => {
   getRecipe();
   }, [query]);
+  
+  
 
   const getRecipe = async () => {
     const response = await fetch(
